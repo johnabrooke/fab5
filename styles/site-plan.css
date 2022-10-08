@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+
+:root {
+    --heading-font: 'Libre Baskerville', serif;
+    --paragraph-font: 'Asap', sans-serif;
+    --primary:#446461;
+    --secondary:#2F3E46;
+    --tertiary:#B9B59F;
+    --accent1:#BF9F4C;
+    --accent2:#6F634D;
+    --background: #eee;
+    --paragraph-color: #1a1320;
+    --paragraph-color2: var(--background);
+}
+
+body {
+    margin: 0;
+    font-size: 20px;
+    background-color: var(--background);
+}
+
+main, header, footer {
+    padding: 1.5em;
+}
+
+main {
+    background-color: var(--background);
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+header, footer {
+    background-color: var(--secondary);
+    text-align: center;
+}
+
+header p, header h1, header h2, footer p, footer h2 {
+    color: var(--paragraph-color2);
+}
+
+main p, main h1, main h2 {
+    color: var(--paragraph-color);
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--heading-font);
+}
+
+p, a {
+    font-family: var(--paragraph-font);
+}
+
+a {
+    color:var(--accent1);
+    text-underline-offset: 1px;
+    text-decoration-thickness: 1px;
+}
+
+a:hover {
+    color:var(--tertiary);
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: .5em;
+}
+
+th {
+    background-color: var(--secondary);
+    color: var(--background)
+}
+
+td {
+    font-family: var(--paragraph-font);
+}
+
+#primary {background-color: var(--primary);}
+#secondary {background-color: var(--secondary);color:var(--background);}
+#tertiary {background-color: var(--tertiary);}
+#accent-1 {background-color: var(--accent1);}
+#accent-2 {background-color: var(--accent2);}
+
+#p-typography {
+    font-family: var(--paragraph-font);
+}
+#h-typography {
+    font-family: var(--heading-font);
+}
