@@ -15,13 +15,14 @@ h1, h2, h3, h4 {
 p, a {
   font-family: "Asap", sans-serif;
 }
-p:hover, p:active, a:hover, a:active {
-  color: #446461;
-}
 
-a {
+a, a:visited {
   text-underline-offset: 1px;
   text-decoration-thickness: 1px;
+  color: #BF9F4C;
+}
+a:hover, a:active, a:visited:hover, a:visited:active {
+  color: #B9B59F;
 }
 
 header > h1 {

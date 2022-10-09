@@ -17,7 +17,7 @@
 @mixin on-event {
     &:hover,
     &:active {
-        color: $primary; //We would like to use math to reduce color of hover.
+        color: $tertiary; //We would like to use math to reduce color of hover.
     }
 }
 
@@ -33,14 +33,15 @@ h1, h2, h3, h4 {
 
 p, a {
     font-family: $paragraph-font;
-    @include on-event;
 }
 
 @mixin link {
     text-underline-offset: 1px;
     text-decoration-thickness: 1px;
+    @include on-event;
 }
 
-a {
+a, a:visited {
     @include link;
+    color: $accent1;
 }
