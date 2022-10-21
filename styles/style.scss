@@ -2,11 +2,10 @@
 @use 'atom';
 @use 'molecules';
 
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,600;1,600&family=Roboto:wght@400;700&display=swap');
 
 :root {
-    --heading-font: 'Libre Baskerville', serif;
+    --heading-font: 'Roboto', serif;
     --paragraph-font: 'Asap', sans-serif;
     --primary:#446461;
     --secondary:#2F3E46;

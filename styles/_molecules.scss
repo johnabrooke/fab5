@@ -3,6 +3,8 @@
 
 header {
     > h1 {
-      @include atom.uppercase($background);
+      //@include atom.uppercase($background);
     }
   }
+
+  

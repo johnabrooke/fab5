@@ -1,5 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,600;1,600&family=Roboto:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,600;1,600&family=Roboto:wght@400;700&display=swap");
+@charset "UTF-8";
+@import url(‘https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,600;1,600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap’);
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Asap&display=swap");
 body {
   margin: 0;
   font-size: 20px;
@@ -7,7 +9,7 @@ body {
 }
 
 h1, h2, h3, h4 {
-  font-family: "Roboto", serif;
+  font-family: "Libre Baskerville", serif;
 }
 
 p, a {
@@ -23,8 +25,15 @@ a:hover, a:active, a:visited:hover, a:visited:active {
   color: #B9B59F;
 }
 
+header > h1 {
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #eee;
+}
+
 :root {
-  --heading-font: "Roboto", serif;
+  --heading-font: "Libre Baskerville", serif;
   --paragraph-font: "Asap", sans-serif;
   --primary:#446461;
   --secondary:#2F3E46;
