@@ -18,6 +18,30 @@
     --paragraph-color2: var(--background);
 }
 
+.page-wrapper {
+    display: grid;
+    // grid-template-rows: repeat(9, 1fr);
+    grid-template-columns: 1fr 4fr 2fr 4fr 1fr;
+}
+
+div section.intro {
+    // display: grid;
+    grid-column: 1 / 6;
+    // background-image: ;
+}
+
+div section header {
+    background-image: url('images/lightning-cropped.jpg');
+}
+
+aside.sidebar {
+    grid-column: 4;
+}
+
+// header {
+//     grid-column: 1 / 6;
+// }
+
 main, header, footer {
     padding: 1.5em;
 }
