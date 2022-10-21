@@ -1,0 +1,8 @@
+@use 'variables' as *;
+@use 'atom';
+
+header {
+    > h1 {
+      @include atom.uppercase($background);
+    }
+  }

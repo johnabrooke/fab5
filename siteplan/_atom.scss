@@ -1,0 +1,47 @@
+@use 'variables' as *;
+
+
+@mixin set-font($size: 1em, $line-height: normal, $font: $paragraph-font) {
+    font-family: $font;
+    font-size: $size;
+    line-height: $line-height;
+}
+
+@mixin uppercase($color: $paragraph-color) {
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $color;
+  }
+
+@mixin on-event {
+    &:hover,
+    &:active {
+        color: $tertiary; //We would like to use math to reduce color of hover.
+    }
+}
+
+body {
+    margin: 0;
+    font-size: 20px;
+    background-color: $background;
+}
+
+h1, h2, h3, h4 {
+    font-family: $heading-font;
+}
+
+p, a {
+    font-family: $paragraph-font;
+}
+
+@mixin link {
+    text-underline-offset: 1px;
+    text-decoration-thickness: 1px;
+    @include on-event;
+}
+
+a, a:visited {
+    @include link;
+    color: $accent1;
+}
