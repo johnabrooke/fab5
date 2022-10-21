@@ -45,23 +45,6 @@ header > h1 {
   --paragraph-color2: var(--background);
 }
 
-.page-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 4fr 2fr 4fr 1fr;
-}
-
-div section.intro {
-  grid-column: 1/6;
-}
-
-div section header {
-  background-image: url("images/lightning-cropped.jpg");
-}
-
-aside.sidebar {
-  grid-column: 4;
-}
-
 main, header, footer {
   padding: 1.5em;
 }
