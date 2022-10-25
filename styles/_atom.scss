@@ -7,12 +7,12 @@
     line-height: $line-height;
 }
 
-@mixin uppercase($color: $paragraph-color) {
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: $color;
-  }
+// @mixin uppercase($color: $paragraph-color) {
+//     font-weight: 600;
+//     letter-spacing: 2px;
+//     text-transform: uppercase;
+//     color: $color;
+//   }
 
 @mixin on-event {
     &:hover,
