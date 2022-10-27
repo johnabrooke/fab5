@@ -19,32 +19,44 @@
 
 .page-wrapper {
     display: grid;
-    grid-template-rows: 500px 500px repeat(3, 1fr);
-    grid-template-columns: 1fr 4fr 2fr 4fr 1fr;
+    grid-gap: 20px;
+    padding: 50px;
+    //grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
 }
 
-div section.intro {
-    // display: grid;
-    grid-column: 1 / 6;
-    grid-row: 1/3;
-    // background-image: ;
+.intro {
+    display: grid;
+    grid-template-areas: 
+    "hero hero hero"
+    "side-bar1 ct-area side-bar2"
+    "footer footer footer";
 }
 
 div section header {
-    margin: 0 auto;
+    grid-area: hero;
     background-image: url('../images/fab5-lightning-sm.gif');
-    background-repeat: no-repeat;
     
+    display: flex;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.page-wrapper.intro.preamble {
-    grid-column: 1/3;
+#zen-summary {
+    grid-area: ct-area;
+    display: grid;
+    //width: 50px;
 }
 
-aside.sidebar {
-    grid-column: 4;
-    grid-row: 2/4;
+.preamble {
+    grid-area: side-bar2;
+    display: grid;
+    width: 100px;
 }
+
+// aside.sidebar {
+//     grid-column: 4;
+//     grid-row: 2/4;
+// }
 
 // header {
 //     grid-column: 1 / 6;
