@@ -27,30 +27,32 @@
 .intro {
     display: grid;
     grid-template-areas: 
-    "hero hero hero"
-    "side-bar1 ct-area side-bar2"
-    "footer footer footer";
+    "hero hero hero hero hero"
+    "side-bar1 ct-area1 ct-area2 ct-area3 side-bar2"
+    "side-bar1 ct-area4 ct-area5 ct-area6 side-bar2"
+    "side-bar1 ct-area7 ct-area8 ct-area9 side-bar2"
+    "side-bar1 ct-area10 ct-area11 ct-area12 side-bar2"
+    "footer footer footer footer footer";
 }
 
 div section header {
     grid-area: hero;
     background-image: url('../images/fab5-lightning-sm.gif');
-    
     display: flex;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 #zen-summary {
-    grid-area: ct-area;
+    grid-area: ct-area2;
     display: grid;
     //width: 50px;
 }
 
 .preamble {
-    grid-area: side-bar2;
+    grid-area: ct-area5;
     display: grid;
-    width: 100px;
+    
 }
 
 // aside.sidebar {
