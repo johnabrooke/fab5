@@ -39,7 +39,7 @@ a:hover, a:active, a:visited:hover, a:visited:active {
 .page-wrapper {
   display: grid;
   grid-gap: 20px;
-  padding: 50px;
+  padding: 0 50px 50px;
 }
 
 .intro {
