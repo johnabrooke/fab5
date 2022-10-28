@@ -21,11 +21,6 @@
     display: grid;
     grid-gap: 20px;
     padding: 0 50px 50px;
-    //grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
-}
-
-.intro {
-    display: grid;
     grid-template-areas: 
     "hero hero hero hero hero"
     "side-bar1 ct-area1 ct-area2 ct-area3 side-bar2"
@@ -33,6 +28,24 @@
     "side-bar1 ct-area7 ct-area8 ct-area9 side-bar2"
     "side-bar1 ct-area10 ct-area11 ct-area12 side-bar2"
     "footer footer footer footer footer";
+    //grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+}
+
+#zen-intro {
+    // display: grid;
+    // grid-area: hero;
+    // grid-template-areas: 
+    // "hero hero hero hero hero"
+    // "side-bar1 ct-area1 ct-area2 ct-area3 side-bar2"
+    // "side-bar1 ct-area4 ct-area5 ct-area6 side-bar2"
+    // "side-bar1 ct-area7 ct-area8 ct-area9 side-bar2"
+    // "side-bar1 ct-area10 ct-area11 ct-area12 side-bar2"
+    // "footer footer footer footer footer";
+}
+
+[role=banner] {
+    grid-area: hero;
+    display: flex;
 }
 
 div section header {
@@ -45,14 +58,20 @@ div section header {
 
 #zen-summary {
     grid-area: ct-area2;
-    display: grid;
+    // display: grid;
     //width: 50px;
 }
 
 .preamble {
-    grid-area: ct-area5;
-    display: grid;
-    
+    grid-area: ct-area5;  
+}
+
+#design-selection {
+    grid-area: ct-area3;
+}
+
+#zen-explanation {
+    grid-area: ct-area7;
 }
 
 // aside.sidebar {
