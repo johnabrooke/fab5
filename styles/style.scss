@@ -32,6 +32,10 @@
 }
 
 #zen-intro {
+    display: grid;
+    grid-area: 
+    "hero hero hero hero hero"
+    "sb1 ta1 ta2 ta3 sb2";
     // display: grid;
     // grid-area: hero;
     // grid-template-areas: 
@@ -43,22 +47,18 @@
     // "footer footer footer footer footer";
 }
 
-[role=banner] {
+header[role=banner] {
     grid-area: hero;
     display: flex;
-}
-
-div section header {
-    grid-area: hero;
     background-image: url('../images/fab5-lightning-sm.gif');
-    display: flex;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-#zen-summary {
+section div#zen-summary {
     grid-area: ct-area2;
-    // display: grid;
+    color: white;
+    display: grid;
     //width: 50px;
 }
 
