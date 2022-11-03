@@ -2,77 +2,67 @@
 @use 'atom';
 @use 'molecules';
 
-@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,600;1,600&family=Roboto:wght@400;700&display=swap');
-
-:root {
-    --heading-font: 'Roboto', serif;
-    --paragraph-font: 'Asap', sans-serif;
-    --primary:#446461;
-    --secondary:#2F3E46;
-    --tertiary:#B9B59F;
-    --accent1:#BF9F4C;
-    --accent2:#6F634D;
-    --background: #eee;
-    --paragraph-color: #101517;
-    --paragraph-color2: var(--background);
-}
-
-.page-wrapper {
-    display: grid;
-    grid-gap: 20px;
-    padding: 0 50px 50px;
-    grid-template-areas: 
-    "hero hero hero hero hero"
-    "side-bar1 ct-area1 ct-area2 ct-area3 side-bar2"
-    "side-bar1 ct-area4 ct-area5 ct-area6 side-bar2"
-    "side-bar1 ct-area7 ct-area8 ct-area9 side-bar2"
-    "side-bar1 ct-area10 ct-area11 ct-area12 side-bar2"
-    "footer footer footer footer footer";
-    //grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
-}
+// .page-wrapper {
+//     display: grid;
+//     grid-gap: 1em;
+//     grid-template-areas: 
+//     "hero hero hero hero hero"
+//     "side-bar1 ct-area1 ct-area1 ct-area1 side-bar2"
+//     "footer footer footer footer footer";
+//     grid-template-columns: repeat(5, 1fr);
+//     // grid-template-rows: auto auto auto auto auto;
+//     margin: 0 auto;
+// }
 
 #zen-intro {
-    display: grid;
-    grid-area: 
-    "hero hero hero hero hero"
-    "sb1 ta1 ta2 ta3 sb2";
-    // display: grid;
-    // grid-area: hero;
-    // grid-template-areas: 
-    // "hero hero hero hero hero"
-    // "side-bar1 ct-area1 ct-area2 ct-area3 side-bar2"
-    // "side-bar1 ct-area4 ct-area5 ct-area6 side-bar2"
-    // "side-bar1 ct-area7 ct-area8 ct-area9 side-bar2"
-    // "side-bar1 ct-area10 ct-area11 ct-area12 side-bar2"
-    // "footer footer footer footer footer";
+   display: grid;
+   grid-template-areas: 
+   "hero hero hero hero hero"
+   "side-bar1 ct-area1 ct-area1 ct-area1 side-bar2";
+   grid-template-columns: repeat(5, 1fr); 
 }
 
 header[role=banner] {
     grid-area: hero;
-    display: flex;
     background-image: url('../images/fab5-lightning-sm.gif');
     background-repeat: no-repeat;
     background-position: center;
 }
 
-section div#zen-summary {
-    grid-area: ct-area2;
-    color: white;
+div[role=article] {
+    grid-area: ct-area1;
+}
+
+.main {
     display: grid;
-    //width: 50px;
+    grid-area: ct-area1;
 }
 
-.preamble {
-    grid-area: ct-area5;  
+div > footer {
+    display: flex;
+    grid-gap: 1em;
+    grid-area: footer;
 }
 
-#design-selection {
-    grid-area: ct-area3;
-}
+// div[role=article] {
+//     display: grid;
+//     grid-area: ct-area2;
+//     color: black;
+//     display: grid;
+//     width: 50px;
+// }
 
-#zen-explanation {
-    grid-area: ct-area7;
-}
+// .preamble {
+//     grid-area: ct-area5;  
+// }
+
+// #design-selection {
+//     grid-area: ct-area3;
+// }
+
+// #zen-explanation {
+//     grid-area: ct-area1;
+// }
 
 // aside.sidebar {
 //     grid-column: 4;
