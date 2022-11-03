@@ -19,12 +19,24 @@ section.intro {
     grid-area: hero;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
     border: 5px solid red;
 }
 
 #zen-intro > header {
     flex-grow: 1;
+
+}
+
+section.intro > div {
+    justify-content: center;
+    
+    padding: 10px 40px;
+    border: 5px solid yellowgreen;
+}
+
+#zen-summary {
+    align-self: flex-end;
 }
 
 // div[role=article] {
