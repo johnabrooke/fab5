@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,600;1,600&family=Roboto:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,600;1,600&family=Roboto:wght@400;700&display=swap");
 :root {
   --heading-font: "Roboto", serif;
   --paragraph-font: "Asap", sans-serif;
@@ -11,6 +10,10 @@
   --background: #eee;
   --paragraph-color: #101517;
   --paragraph-color2: var(--background);
+}
+
+html {
+  width: 100%;
 }
 
 body {
@@ -30,6 +33,10 @@ p, a {
   font-family: "Asap", sans-serif;
 }
 
+img {
+  max-width: 100%;
+}
+
 a, a:visited {
   text-underline-offset: 1px;
   text-decoration-thickness: 1px;
@@ -39,32 +46,46 @@ a:hover, a:active, a:visited:hover, a:visited:active {
   color: #B9B59F;
 }
 
-#zen-intro {
-  display: grid;
-  grid-template-areas: "hero hero hero hero hero" "side-bar1 ct-area1 ct-area1 ct-area1 side-bar2";
-  grid-template-columns: repeat(5, 1fr);
-}
-
 header[role=banner] {
-  grid-area: hero;
   background-image: url("../images/fab5-lightning-sm.gif");
   background-repeat: no-repeat;
   background-position: center;
+  border: 5px solid hotpink;
 }
 
-div[role=article] {
-  grid-area: ct-area1;
+.page-wrapper {
+  display: grid;
+  grid-gap: 1em;
+  grid-template-areas: "hero hero hero hero hero" "side-bar1 ct-area1 ct-area1 ct-area1 side-bar2" "side-bar1 ct-area2 ct-area2 ct-area2 side-bar2" "footer footer footer footer footer";
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto auto auto auto auto;
+  margin: 0 auto;
+}
+
+section.intro {
+  grid-area: hero;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  border: 5px solid red;
+}
+
+#zen-intro > header {
+  flex-grow: 1;
 }
 
 .main {
-  display: grid;
-  grid-area: ct-area1;
+  grid-area: ct-area2;
 }
 
 div > footer {
   display: flex;
   grid-gap: 1em;
   grid-area: footer;
+}
+
+aside[role=complementary] {
+  grid-area: side-bar2;
 }
 
 main, header, footer {

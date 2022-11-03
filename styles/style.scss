@@ -2,46 +2,52 @@
 @use 'atom';
 @use 'molecules';
 
-// .page-wrapper {
-//     display: grid;
-//     grid-gap: 1em;
-//     grid-template-areas: 
-//     "hero hero hero hero hero"
-//     "side-bar1 ct-area1 ct-area1 ct-area1 side-bar2"
-//     "footer footer footer footer footer";
-//     grid-template-columns: repeat(5, 1fr);
-//     // grid-template-rows: auto auto auto auto auto;
-//     margin: 0 auto;
+.page-wrapper {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-areas: 
+    "hero hero hero hero hero"
+    "side-bar1 ct-area1 ct-area1 ct-area1 side-bar2"
+    "side-bar1 ct-area2 ct-area2 ct-area2 side-bar2"
+    "footer footer footer footer footer";
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto auto auto auto auto;
+    margin: 0 auto;
+}
+
+section.intro {
+    grid-area: hero;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    border: 5px solid red;
+}
+
+#zen-intro > header {
+    flex-grow: 1;
+}
+
+// div[role=article] {
+//     flex-grow: 1;
+//     border: 5px solid yellowgreen;
 // }
 
-#zen-intro {
-   display: grid;
-   grid-template-areas: 
-   "hero hero hero hero hero"
-   "side-bar1 ct-area1 ct-area1 ct-area1 side-bar2";
-   grid-template-columns: repeat(5, 1fr); 
-}
-
-header[role=banner] {
-    grid-area: hero;
-    background-image: url('../images/fab5-lightning-sm.gif');
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-div[role=article] {
-    grid-area: ct-area1;
-}
+// #zen-summary {
+//     grid-area: ct-area1;
+// }
 
 .main {
-    display: grid;
-    grid-area: ct-area1;
+    grid-area: ct-area2;
 }
 
 div > footer {
     display: flex;
     grid-gap: 1em;
     grid-area: footer;
+}
+
+aside[role=complementary] {
+    grid-area: side-bar2;
 }
 
 // div[role=article] {

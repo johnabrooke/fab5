@@ -1,5 +1,5 @@
 @use 'variables' as *;
-@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,600;1,600&family=Roboto:wght@400;700&display=swap');
+
 
 @mixin set-font($size: 1em, $line-height: normal, $font: $paragraph-font) {
     font-family: $font;
@@ -34,6 +34,10 @@
     --paragraph-color2: var(--background);
 }
 
+html {
+    width: 100%;
+}
+
 body {
     display: grid;
     place-content: center;
@@ -49,6 +53,10 @@ h1, h2, h3, h4 {
 
 p, a {
     font-family: $paragraph-font;
+}
+
+img {
+    max-width: 100%;
 }
 
 @mixin link {
