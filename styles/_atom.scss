@@ -21,18 +21,18 @@
     }
 }
 
-:root {
-    --heading-font: 'Roboto', serif;
-    --paragraph-font: 'Asap', sans-serif;
-    --primary:#446461;
-    --secondary:#2F3E46;
-    --tertiary:#B9B59F;
-    --accent1:#BF9F4C;
-    --accent2:#6F634D;
-    --background: #eee;
-    --paragraph-color: #101517;
-    --paragraph-color2: var(--background);
-}
+// :root {
+//     --heading-font: 'Roboto', serif;
+//     --paragraph-font: 'Asap', sans-serif;
+//     --primary:#446461;
+//     --secondary:#2F3E46;
+//     --tertiary:#B9B59F;
+//     --accent1:#BF9F4C;
+//     --accent2:#6F634D;
+//     --background: #eee;
+//     --paragraph-color: #101517;
+//     --paragraph-color2: var(--background);
+// }
 
 html {
     width: 100%;
@@ -59,8 +59,28 @@ img {
     max-width: 100%;
 }
 
+// section.intro {
+//     padding: 10px 40px;
+// }
+
+.main, #zen-summary, #zen-preamble {
+    padding: 0 40px;
+}
+
+.sidebar {
+    background-color: $secondary;
+    color: $white;
+    padding: 20px;
+    border-radius: 8px 0 0 8px;
+}
+
+.sidebar h3 {
+    color: $accent2;
+    color: $primary2;
+}
+
 @mixin link {
-    text-underline-offset: 1px;
+    text-underline-offset: 2px;
     text-decoration-thickness: 1px;
     @include on-event;
 }
