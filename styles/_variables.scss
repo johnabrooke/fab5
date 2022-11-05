@@ -16,6 +16,22 @@ $background: #0b0713;
 $paragraph-color: $white;
 $paragraph-color2: $white;
 $img-path: "../images/";
+// Gradient
+$gradient: linear-gradient(
+    45deg,
+    #7853be,
+    #8361c4,
+    #8e6fc9,
+    #997ece,
+    #a48cd4,
+    #b09ad9,
+    #bba8df,
+    #c6b7e4,
+    #d1c5e9,
+    #ddd3ef,
+    #e8e1f4,
+    #f3f0f9,
+);
 
 *,
 *::before,

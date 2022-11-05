@@ -21,18 +21,10 @@
     }
 }
 
-// :root {
-//     --heading-font: 'Roboto', serif;
-//     --paragraph-font: 'Asap', sans-serif;
-//     --primary:#446461;
-//     --secondary:#2F3E46;
-//     --tertiary:#B9B59F;
-//     --accent1:#BF9F4C;
-//     --accent2:#6F634D;
-//     --background: #eee;
-//     --paragraph-color: #101517;
-//     --paragraph-color2: var(--background);
-// }
+@keyframes bg-animation {
+    0% {background-position: left;}
+    100% {background-position: right;}
+}
 
 html {
     width: 100%;
@@ -58,10 +50,6 @@ p, a {
 img {
     max-width: 100%;
 }
-
-// section.intro {
-//     padding: 10px 40px;
-// }
 
 .main, #zen-summary, #zen-preamble {
     padding: 0 40px;
@@ -89,3 +77,22 @@ a, a:visited {
     @include link;
     color: $accent1;
 }
+
+// Unneeded CSS - Clean Up
+
+// :root {
+//     --heading-font: 'Roboto', serif;
+//     --paragraph-font: 'Asap', sans-serif;
+//     --primary:#446461;
+//     --secondary:#2F3E46;
+//     --tertiary:#B9B59F;
+//     --accent1:#BF9F4C;
+//     --accent2:#6F634D;
+//     --background: #eee;
+//     --paragraph-color: #101517;
+//     --paragraph-color2: var(--background);
+// }
+
+// section.intro {
+//     padding: 10px 40px;
+// }

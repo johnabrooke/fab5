@@ -5,6 +5,23 @@
   box-sizing: border-box;
 }
 
+@-webkit-keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
 html {
   width: 100%;
 }
@@ -59,6 +76,32 @@ header[role=banner] {
   background-image: url("../images/fab5-lightning-sm.gif");
   background-repeat: no-repeat;
   background-position: center;
+}
+header[role=banner] > h1 {
+  font-size: 2.5em;
+  font-weight: 900;
+  line-height: 1;
+  margin: 20px 0 0;
+  background-image: linear-gradient(45deg, #7853be, #8361c4, #8e6fc9, #997ece, #a48cd4, #b09ad9, #bba8df, #c6b7e4, #d1c5e9, #ddd3ef, #e8e1f4, #f3f0f9);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  background-size: 400%;
+  -webkit-animation: bg-animation 1.5s infinite alternate;
+          animation: bg-animation 1.5s infinite alternate;
+}
+header[role=banner] > h2 {
+  font-size: 2em;
+  font-weight: 900;
+  line-height: 1;
+  margin: 20px 0 20px;
+  background-image: linear-gradient(45deg, #7853be, #8361c4, #8e6fc9, #997ece, #a48cd4, #b09ad9, #bba8df, #c6b7e4, #d1c5e9, #ddd3ef, #e8e1f4, #f3f0f9);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  background-size: 400%;
+  -webkit-animation: bg-animation 1.5s infinite alternate;
+          animation: bg-animation 1.5s infinite alternate;
 }
 
 .page-wrapper {
