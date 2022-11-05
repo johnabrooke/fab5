@@ -64,8 +64,8 @@ section.intro > div {
     display: grid;
     // grid-column: 1 / 6;
     grid-template-areas: 
-    "explain explain explain explain ."
-    "participate participate participate participate ."
+    "explain explain explain . ."
+    "participate participate participate . ."
     "benefits benefits benefits benefits ."
     "require require require require ."
     "end end end end end";;
