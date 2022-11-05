@@ -2,13 +2,39 @@
 
 $heading-font: 'Roboto', serif;
 $paragraph-font: 'Asap', sans-serif;
-$primary:#446461;
-$secondary:#2F3E46;
+$primary:#461257;
+$primary2: #a47bb1;
+$primary3: #422a70;
+// $secondary:#211538;
+$secondary: #4b307f;
 $tertiary:#B9B59F;
 $accent1:#BF9F4C;
-$accent2:#6F634D;
-$white: #efefef;
-$background: #eee;
-$paragraph-color:#101517;
-$paragraph-color2: $background;
+$accent2:#e4d173;
+$white: #ebebeb;
+// $background: #333333;
+$background: #0b0713;
+$paragraph-color: $white;
+$paragraph-color2: $white;
 $img-path: "../images/";
+// Gradient
+$gradient: linear-gradient(
+    45deg,
+    #7853be,
+    #8361c4,
+    #8e6fc9,
+    #997ece,
+    #a48cd4,
+    #b09ad9,
+    #bba8df,
+    #c6b7e4,
+    #d1c5e9,
+    #ddd3ef,
+    #e8e1f4,
+    #f3f0f9,
+);
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
