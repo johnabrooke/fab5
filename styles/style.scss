@@ -7,8 +7,8 @@
     grid-gap: 1em;
     grid-template-areas: 
     "hero hero hero hero hero"
-    "ct-area1 ct-area1 ct-area1 ct-area1 side-bar2"
-    // "ct-area2 ct-area2 ct-area2 ct-area2 side-bar2"
+    "ct-area1 ct-area1 ct-area1 ct-area1 ct-area1"
+    "ct-area2 ct-area2 ct-area2 ct-area2 . "
     "footer footer footer footer footer";
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto auto;
@@ -29,8 +29,8 @@ section.intro {
     grid-gap: 1em;
     grid-template-areas: 
     "hero hero hero hero hero"
-    "ca1 ca1 ca1 ca1 sb2"
-    "ca2 ca2 ca2 ca2 sb2";
+    "ca1 ca1 ca1 ca1 side-bar2"
+    "ca2 ca2 ca2 ca2 .";
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto auto auto; 
 }
@@ -61,9 +61,31 @@ section.intro > div {
 // }
 
 .main {
-    //display: grid;
-    
+    display: grid;
+    // grid-column: 1 / 6;
+    grid-template-areas: 
+    "explain explain explain . ."
+    "participate participate participate . ."
+    "benefits benefits benefits . ."
+    "require require require require ."
+    "end end end end end";
     grid-area: ct-area1;
+}
+
+#zen-explanation {
+    grid-area: explain;
+}
+
+#zen-participation {
+    grid-area: participate;
+}
+
+#zen-benefits {
+    grid-area: benefits;
+}
+
+#zen-requirements {
+    grid-area: require;
 }
 
 footer {
@@ -71,7 +93,7 @@ footer {
     gap: 1em;
     justify-content: center;
     grid-area: side-bar1;
-    grid-area: footer;
+    grid-area: end;
     // border: 5px solid hotpink;
 }
 
