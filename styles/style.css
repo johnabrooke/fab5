@@ -75,6 +75,10 @@ a:hover, a:active, a:visited:hover, a:visited:active {
   text-decoration-thickness: 1px;
 }
 
+abbr {
+  text-decoration: none;
+}
+
 header[role=banner] {
   background-image: url("../images/fab5-lightning-sm.gif");
   background-repeat: no-repeat;
