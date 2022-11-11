@@ -18,6 +18,9 @@
     &:hover,
     &:active {
         color: $tertiary; //We would like to use math to reduce color of hover.
+        text-decoration: underline;
+        text-underline-offset: 2px;
+        text-decoration-thickness: 1px;
     }
 }
 
@@ -65,19 +68,17 @@ img {
 }
 
 .sidebar h3 {
-    color: $accent2;
     color: $primary2;
 }
 
 @mixin link {
-    text-underline-offset: 2px;
-    text-decoration-thickness: 1px;
     @include on-event;
 }
 
 a, a:visited {
     @include link;
-    color: $accent1;
+    color: $primary2;
+    text-decoration: none;
 }
 
 // Unneeded CSS - Clean Up

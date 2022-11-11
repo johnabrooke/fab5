@@ -54,24 +54,25 @@ img {
 }
 
 .sidebar {
-  background-color: #4b307f;
+  background-color: #382858;
   color: #ebebeb;
   padding: 20px;
   border-radius: 8px 0 0 8px;
 }
 
 .sidebar h3 {
-  color: #e4d173;
   color: #a47bb1;
 }
 
 a, a:visited {
-  text-underline-offset: 2px;
-  text-decoration-thickness: 1px;
-  color: #BF9F4C;
+  color: #a47bb1;
+  text-decoration: none;
 }
 a:hover, a:active, a:visited:hover, a:visited:active {
-  color: #B9B59F;
+  color: #c6b7e4;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
 }
 
 header[role=banner] {
@@ -135,7 +136,7 @@ section.intro > div {
 
 .main {
   display: grid;
-  grid-template-areas: "explain explain explain . ." "participate participate participate . ." "benefits benefits benefits benefits ." "require require require require ." "end end end end end";
+  grid-template-areas: "explain explain explain . ." "participate participate participate . ." "benefits benefits benefits . ." "require require require require ." "end end end end end";
   grid-area: ct-area1;
 }
 
@@ -183,7 +184,7 @@ main {
 }
 
 header, footer {
-  background-color: #4b307f;
+  background-color: #382858;
   text-align: center;
 }
 
