@@ -1,14 +1,15 @@
 @use 'variables' as *;
 @use 'atom';
-
+  
 header[role=banner] {
   background-image: url('../images/fab5-lightning-sm.gif');
   background-repeat: no-repeat;
   background-position: center;
-    > h1 {
+  padding: 2em 0;
+    :is(h1, h2) {
       font-size: 2.5em;
       font-weight: 900;
-      line-height: 1;
+      line-height: 3.6rem;
       margin: 20px 0 0;
       background-image: $gradient;
       background-clip: text;
@@ -16,16 +17,4 @@ header[role=banner] {
       background-size: 400%;
       animation: bg-animation 1.5s infinite alternate;
     }
-    > h2 {
-      font-size: 2em;
-      font-weight: 900;
-      line-height: 1;
-      margin: 20px 0 20px;
-      background-image: $gradient;
-      background-clip: text;
-      color: transparent;
-      background-size: 400%;
-      animation: bg-animation 1.5s infinite alternate;
-    }
   }
-  

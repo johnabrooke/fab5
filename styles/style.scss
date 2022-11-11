@@ -40,15 +40,16 @@ header {
 }
 
 #zen-summary {
-    grid-area: ca1;
+    grid-area: ca1; 
 }
-
-// #zen-intro > header {
-//     flex-grow: 1;
-// }
 
 #zen-preamble {
     grid-area: ca2;
+}
+
+:is(#zen-summary, #zen-preamble, #zen-explanation) {
+    max-width: 800px;
+    justify-self: center;
 }
 
 section.intro > div {
@@ -101,7 +102,7 @@ aside[role=complementary] {
     // grid-area: hero;
     grid-row: 1 / 3;
     // align-self: center;
-    margin-top: 220px;
+    margin-top: 250px;
     height: fit-content;
     grid-column: 5;
 }
@@ -135,7 +136,7 @@ aside[role=complementary] {
 //     grid-column: 1 / 6;
 // }
 
-main, header, footer {
+:is(main, footer) {
     padding: 1.5em;
 }
 
