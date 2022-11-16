@@ -7,7 +7,7 @@
     grid-gap: 1em;
     grid-template-areas: 
     "hero hero hero hero hero"
-    "ct-area1 ct-area1 ct-area1 ct-area1 ct-area1"
+    "ct-area1 ct-area1 ct-area1 ct-area1 . "
     "ct-area2 ct-area2 ct-area2 ct-area2 . "
     "footer footer footer footer footer";
     grid-template-columns: repeat(5, 1fr);
@@ -39,7 +39,12 @@ header {
     grid-area: ca2;
 }
 
-:is(#zen-summary, #zen-preamble, #zen-explanation) {
+#zen-summary, #zen-preamble {
+    max-width: 800px;
+    justify-self: center;
+}
+
+div.supporting {
     max-width: 800px;
     justify-self: center;
 }
@@ -50,15 +55,17 @@ section.intro > div {
 }
 
 .main {
+    // border: 5px dotted hotpink;
     display: grid;
     // grid-column: 1 / 6;
     grid-template-areas: 
-    "explain explain explain . ."
-    "participate participate participate . ."
-    "benefits benefits benefits . ."
+    "explain explain explain explain ."
+    "participate participate participate participate ."
+    "benefits benefits benefits benefits ."
     "require require require require ."
     "end end end end end";
     grid-area: ct-area1;
+    padding: 0 10px;
 }
 
 #zen-explanation {
@@ -87,12 +94,14 @@ aside[role=complementary] {
 }
 
 footer {
+    border: 5px dotted hotpink;
     display: flex;
     gap: 1em;
     justify-content: center;
-    grid-area: side-bar1;
     grid-area: end;
-    // border: 5px solid hotpink;
+    // position: relative;
+    // transform: translateY(10%);
+    // overflow: hidden;
 }
 
 :is(main, footer) {

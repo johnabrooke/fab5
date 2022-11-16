@@ -24,7 +24,6 @@
 }
 html {
   width: 100%;
-  font-size: 16px;
 }
 
 body {
@@ -33,6 +32,7 @@ body {
   min-height: 100vh;
   margin: 0 auto;
   background-color: #0b0713;
+  font-size: 1em;
 }
 
 h1, h2, h3, h4 {
@@ -50,8 +50,8 @@ img {
   max-width: 100%;
 }
 
-:is(.main, #zen-summary, #zen-preamble) {
-  padding: 0 20px;
+#zen-summary, #zen-preamble {
+  padding: 0 10px;
 }
 
 .sidebar {
@@ -97,7 +97,7 @@ abbr {
 
 :is(#zen-summary a, #zen-participation a) {
   font-style: italic;
-  transition: all 500ms ease-in-out;
+  transition: all 50ms ease-in;
   color: #a47bb1;
 }
 
@@ -128,7 +128,7 @@ header[role=banner] :is(h1, h2) {
 .page-wrapper {
   display: grid;
   grid-gap: 1em;
-  grid-template-areas: "hero hero hero hero hero" "ct-area1 ct-area1 ct-area1 ct-area1 ct-area1" "ct-area2 ct-area2 ct-area2 ct-area2 . " "footer footer footer footer footer";
+  grid-template-areas: "hero hero hero hero hero" "ct-area1 ct-area1 ct-area1 ct-area1 . " "ct-area2 ct-area2 ct-area2 ct-area2 . " "footer footer footer footer footer";
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: auto auto;
   margin: 0 auto;
@@ -155,7 +155,12 @@ header {
   grid-area: ca2;
 }
 
-:is(#zen-summary, #zen-preamble, #zen-explanation) {
+#zen-summary, #zen-preamble {
+  max-width: 800px;
+  justify-self: center;
+}
+
+div.supporting {
   max-width: 800px;
   justify-self: center;
 }
@@ -166,8 +171,9 @@ section.intro > div {
 
 .main {
   display: grid;
-  grid-template-areas: "explain explain explain . ." "participate participate participate . ." "benefits benefits benefits . ." "require require require require ." "end end end end end";
+  grid-template-areas: "explain explain explain explain ." "participate participate participate participate ." "benefits benefits benefits benefits ." "require require require require ." "end end end end end";
   grid-area: ct-area1;
+  padding: 0 10px;
 }
 
 #zen-explanation {
@@ -196,10 +202,10 @@ aside[role=complementary] {
 }
 
 footer {
+  border: 5px dotted hotpink;
   display: flex;
   gap: 1em;
   justify-content: center;
-  grid-area: side-bar1;
   grid-area: end;
 }
 
