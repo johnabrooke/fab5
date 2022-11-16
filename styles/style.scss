@@ -15,14 +15,6 @@
     margin: 0 auto;
 }
 
-// section.intro {
-//     grid-area: hero;
-//     display: flex;
-//     flex-wrap: wrap;
-//     flex-direction: column;
-//     border: 5px solid red;
-// }
-
 section.intro {
     grid-area: hero;
     display: grid;
@@ -57,10 +49,6 @@ section.intro > div {
     // border: 5px solid yellowgreen;
 }
 
-// #zen-summary {
-//     align-self: flex-start;
-// }
-
 .main {
     display: grid;
     // grid-column: 1 / 6;
@@ -89,6 +77,15 @@ section.intro > div {
     grid-area: require;
 }
 
+aside[role=complementary] {
+    // grid-area: hero;
+    grid-row: 1 / 3;
+    // align-self: center;
+    margin-top: 250px;
+    height: fit-content;
+    grid-column: 5;
+}
+
 footer {
     display: flex;
     gap: 1em;
@@ -98,14 +95,45 @@ footer {
     // border: 5px solid hotpink;
 }
 
-aside[role=complementary] {
-    // grid-area: hero;
-    grid-row: 1 / 3;
-    // align-self: center;
-    margin-top: 250px;
-    height: fit-content;
-    grid-column: 5;
+:is(main, footer) {
+    padding: 1.5em;
 }
+
+main {
+    background-color: $background;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+header, footer {
+    background-color: $secondary;
+    text-align: center;
+}
+
+header {
+    background-color: $background;
+}
+
+header p, header h1, header h2, footer p, footer h2 {
+    color: $white;
+}
+
+.main p, .main h2, .intro p {
+    color: $white;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    margin: 0;
+}
+
+//Unused or unneeded CSS: 
 
 // div[role=article] {
 //     display: grid;
@@ -136,44 +164,18 @@ aside[role=complementary] {
 //     grid-column: 1 / 6;
 // }
 
-:is(main, footer) {
-    padding: 1.5em;
-}
+// section.intro {
+//     grid-area: hero;
+//     display: flex;
+//     flex-wrap: wrap;
+//     flex-direction: column;
+//     border: 5px solid red;
+// }
 
-main {
-    background-color: $background;
-    max-width: 1100px;
-    margin: 0 auto;
-}
+// h3 {
+//     color: $primary2;
+// }
 
-header, footer {
-    background-color: $secondary;
-    text-align: center;
-}
-
-header {
-    background-color: $background;
-}
-
-header p, header h1, header h2, footer p, footer h2 {
-    color: $white;
-}
-
-.main p, .main h2, .intro p {
-    color: $white;
-}
-
-h3 {
-    color: $primary2;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-li {
-    padding: 10px;
-    margin: 0;
-}
+// #zen-summary {
+//     align-self: flex-start;
+// }

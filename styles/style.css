@@ -24,6 +24,7 @@
 }
 html {
   width: 100%;
+  font-size: 16px;
 }
 
 body {
@@ -31,13 +32,13 @@ body {
   place-content: center;
   min-height: 100vh;
   margin: 0 auto;
-  font-size: 16px;
   background-color: #0b0713;
 }
 
 h1, h2, h3, h4 {
   font-family: "Roboto", serif;
   font-size: 2rem;
+  color: #E3DBEB;
 }
 
 p, a {
@@ -55,18 +56,19 @@ img {
 
 .sidebar {
   background-color: #382858;
-  color: #ebebeb;
   padding: 20px;
   border-radius: 8px 0 0 8px;
 }
 
-.sidebar h3 {
-  color: #a47bb1;
+:is(.sidebar[role=complementary], .select, .archives, .resources) {
+  font-size: clamp(1.2em, 1.5vw, 2rem);
+  color: #E3DBEB;
 }
 
 a, a:visited {
-  color: #a47bb1;
+  color: #E3DBEB;
   text-decoration: none;
+  font-size: clamp(0.8em, 1.5vw, 2rem);
 }
 a:hover, a:active, a:visited:hover, a:visited:active {
   color: #c6b7e4;
@@ -77,6 +79,27 @@ a:hover, a:active, a:visited:hover, a:visited:active {
 
 abbr {
   text-decoration: none;
+}
+
+.design-name {
+  font-size: clamp(0.8em, 1.5vw, 2rem);
+  color: #E3DBEB;
+}
+
+:is(.designer-name, nav[role=navigation]) {
+  font-size: clamp(0.6em, 1vw, 1.5rem);
+  color: #E3DBEB;
+}
+
+.design-name::after {
+  content: "\a";
+  white-space: pre;
+}
+
+aside {
+  position: fixed;
+  right: 0;
+  overflow-y: auto;
 }
 
 header[role=banner] {
@@ -160,14 +183,6 @@ section.intro > div {
   grid-area: require;
 }
 
-footer {
-  display: flex;
-  gap: 1em;
-  justify-content: center;
-  grid-area: side-bar1;
-  grid-area: end;
-}
-
 aside[role=complementary] {
   grid-row: 1/3;
   margin-top: 250px;
@@ -175,6 +190,14 @@ aside[role=complementary] {
   height: -moz-fit-content;
   height: fit-content;
   grid-column: 5;
+}
+
+footer {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  grid-area: side-bar1;
+  grid-area: end;
 }
 
 :is(main, footer) {
@@ -202,10 +225,6 @@ header p, header h1, header h2, footer p, footer h2 {
 
 .main p, .main h2, .intro p {
   color: #ebebeb;
-}
-
-h3 {
-  color: #a47bb1;
 }
 
 ul {
