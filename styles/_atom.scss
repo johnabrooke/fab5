@@ -50,15 +50,15 @@ h1, h2, h3, h4 {
 
 p, a {
     font-family: $paragraph-font;
-    font-size: 1.25rem;
+    font-size: clamp(1em, 1.5vw, 2rem);
 }
 
 img {
     max-width: 100%;
 }
 
-.main, #zen-summary, #zen-preamble {
-    padding: 0 40px;
+:is(.main, #zen-summary, #zen-preamble) {
+    padding: 0 20px;
 }
 
 .sidebar {
@@ -80,7 +80,7 @@ a, a:visited {
     @include link;
     color: $lt-purple;
     text-decoration: none;
-    font-size: clamp(.8em, 1.5vw, 2rem);
+    // font-size: clamp(1em, 1.5vw, 2rem);
 }
 
 abbr {
@@ -102,10 +102,22 @@ abbr {
     white-space: pre;
 }
 
-aside {
-    position: fixed;
-    right: 0;
-    overflow-y: auto;
+// This locks the sidebar to the right side of the screen, but
+// locks the height of the sidebar as well.
+// aside {
+//     position: fixed;
+//     right: 0;
+//     overflow-y: auto;
+// }
+
+:is(#zen-summary a, #zen-participation a) {
+    font-style: italic;
+    transition: all 500ms ease-in-out;
+    color: $primary2;
+}
+
+:is(#zen-summary a:hover, #zen-participation a:hover) {
+    font-size: 1.15em;
 }
 
 // Unneeded CSS - Clean Up

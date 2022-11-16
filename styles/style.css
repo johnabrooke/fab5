@@ -43,15 +43,15 @@ h1, h2, h3, h4 {
 
 p, a {
   font-family: "Asap", sans-serif;
-  font-size: 1.25rem;
+  font-size: clamp(1em, 1.5vw, 2rem);
 }
 
 img {
   max-width: 100%;
 }
 
-.main, #zen-summary, #zen-preamble {
-  padding: 0 40px;
+:is(.main, #zen-summary, #zen-preamble) {
+  padding: 0 20px;
 }
 
 .sidebar {
@@ -68,7 +68,6 @@ img {
 a, a:visited {
   color: #E3DBEB;
   text-decoration: none;
-  font-size: clamp(0.8em, 1.5vw, 2rem);
 }
 a:hover, a:active, a:visited:hover, a:visited:active {
   color: #c6b7e4;
@@ -96,10 +95,14 @@ abbr {
   white-space: pre;
 }
 
-aside {
-  position: fixed;
-  right: 0;
-  overflow-y: auto;
+:is(#zen-summary a, #zen-participation a) {
+  font-style: italic;
+  transition: all 500ms ease-in-out;
+  color: #a47bb1;
+}
+
+:is(#zen-summary a:hover, #zen-participation a:hover) {
+  font-size: 1.15em;
 }
 
 header[role=banner] {
