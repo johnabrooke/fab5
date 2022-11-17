@@ -125,25 +125,24 @@ header[role=banner] :is(h1, h2) {
           animation: bg-animation 1.5s infinite alternate;
 }
 
-@media screen and (max-width: 450px) {
-  div.supporting {
-    max-width: 450px;
-  }
-  aside {
-    display: none;
-  }
+@media screen and (max-width: 550px) {
   div.page-wrapper {
-    display: grid;
-    grid-gap: 1em;
-    grid-template-columns: 1fr;
+    display: block;
     margin: 0 auto;
-  }
-  div.page-wrapper > p {
-    margin: 0 40px;
   }
   div > section.intro {
     display: block;
-    grid-gap: 1em;
+  }
+  div.supporting {
+    display: block;
+  }
+  h3, p {
+    font-size: 1.2em;
+    margin: 20px 2vw;
+    line-height: 1.5em;
+  }
+  :is(a.designer-name, nav[role=navigation]) {
+    font-size: 0.8em;
   }
 }
 .page-wrapper {
@@ -228,7 +227,7 @@ footer {
   gap: 1em;
   justify-content: center;
   grid-area: end;
-  width: min(200%, 1020px);
+  width: min(100%, 1020px);
 }
 
 :is(main, footer) {
