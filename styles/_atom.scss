@@ -114,6 +114,7 @@ abbr {
 :is(#zen-summary a, #zen-participation a) {
     font-style: italic;
     transition: all 50ms ease-in;
+    // transform: scale(.7);
     color: $primary2;
 }
 
