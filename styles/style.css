@@ -207,6 +207,7 @@ footer {
   gap: 1em;
   justify-content: center;
   grid-area: end;
+  width: min(200%, 1020px);
 }
 
 :is(main, footer) {

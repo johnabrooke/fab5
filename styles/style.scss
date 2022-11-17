@@ -99,8 +99,11 @@ footer {
     gap: 1em;
     justify-content: center;
     grid-area: end;
+    width: min(200%, 1020px);
     // position: relative;
-    // transform: translateY(10%);
+    // right: 100px;
+    // top: 10px;
+    // transform: translate(-100px, 10px);
     // overflow: hidden;
 }
 
