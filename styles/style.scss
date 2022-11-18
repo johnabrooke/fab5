@@ -91,6 +91,8 @@ aside[role=complementary] {
     margin-top: 250px;
     height: fit-content;
     grid-column: 5;
+    position: sticky;
+    top: 0;
 }
 
 footer {

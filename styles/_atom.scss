@@ -39,7 +39,7 @@ body {
     min-height: 100vh;
     margin: 0 auto;
     background-color: $background;
-    font-size: 1em;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
 }
 
 h1, h2, h3, h4 {
@@ -50,7 +50,7 @@ h1, h2, h3, h4 {
 
 p, a {
     font-family: $paragraph-font;
-    font-size: clamp(1em, 1.5vw, 2rem);
+    // font-size: clamp(1rem, 1.5vw, 2rem);
 }
 
 img {
@@ -68,7 +68,7 @@ img {
 }
 
 :is(.sidebar[role=complementary], .select, .archives, .resources) {
-    font-size: clamp(1.2em, 1.5vw, 2rem);
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
     color: $lt-purple;
 }
 
@@ -88,12 +88,12 @@ abbr {
 }
 
 .design-name {
-    font-size: clamp(.8em, 1.5vw, 2rem);
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
     color: $lt-purple;
 }
 
 :is(.designer-name, nav[role=navigation]) {
-    font-size: clamp(.6em, 1vw, 1.5rem);
+    font-size: clamp(.75rem, 1vw, 1rem);
     color: $lt-purple;
 }
 
