@@ -38,35 +38,38 @@ body {
     place-content: center;
     min-height: 100vh;
     margin: 0 auto;
-    font-size: 20px;
     background-color: $background;
+    font-size: 1em;
 }
 
 h1, h2, h3, h4 {
     font-family: $heading-font;
+    font-size: 2rem;
+    color: $lt-purple;
 }
 
 p, a {
     font-family: $paragraph-font;
+    font-size: clamp(1em, 1.5vw, 2rem);
 }
 
 img {
     max-width: 100%;
 }
 
-.main, #zen-summary, #zen-preamble {
-    padding: 0 40px;
+#zen-summary, #zen-preamble {
+    padding: 0 10px;
 }
 
 .sidebar {
     background-color: $secondary;
-    color: $white;
     padding: 20px;
     border-radius: 8px 0 0 8px;
 }
 
-.sidebar h3 {
-    color: $primary2;
+:is(.sidebar[role=complementary], .select, .archives, .resources) {
+    font-size: clamp(1.2em, 1.5vw, 2rem);
+    color: $lt-purple;
 }
 
 @mixin link {
@@ -75,12 +78,48 @@ img {
 
 a, a:visited {
     @include link;
-    color: $primary2;
+    color: $lt-purple;
     text-decoration: none;
+    // font-size: clamp(1em, 1.5vw, 2rem);
 }
 
 abbr {
     text-decoration: none;
+}
+
+.design-name {
+    font-size: clamp(.8em, 1.5vw, 2rem);
+    color: $lt-purple;
+}
+
+:is(.designer-name, nav[role=navigation]) {
+    font-size: clamp(.6em, 1vw, 1.5rem);
+    color: $lt-purple;
+}
+
+.design-name::after {
+    content: "\a";
+    white-space: pre;
+}
+
+// This locks the sidebar to the right side of the screen, but
+// locks the height of the sidebar as well.
+// aside.sidebar {
+//     position: absolute;
+//     top: 10px;
+//     right: 0;
+//     overflow: auto;
+// }
+
+:is(#zen-summary a, #zen-participation a) {
+    font-style: italic;
+    transition: all 50ms ease-in;
+    // transform: scale(.7);
+    color: $primary2;
+}
+
+:is(#zen-summary a:hover, #zen-participation a:hover) {
+    font-size: 1.15em;
 }
 
 // Unneeded CSS - Clean Up
@@ -100,4 +139,9 @@ abbr {
 
 // section.intro {
 //     padding: 10px 40px;
+// }
+
+// nav[role=navigation] {
+//     font-size: clamp(.6em, 1vw, 1.5rem);
+//     color: $lt-purple;
 // }

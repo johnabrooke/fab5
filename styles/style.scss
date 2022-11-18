@@ -7,21 +7,13 @@
     grid-gap: 1em;
     grid-template-areas: 
     "hero hero hero hero hero"
-    "ct-area1 ct-area1 ct-area1 ct-area1 ct-area1"
+    "ct-area1 ct-area1 ct-area1 ct-area1 . "
     "ct-area2 ct-area2 ct-area2 ct-area2 . "
     "footer footer footer footer footer";
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto auto;
     margin: 0 auto;
 }
-
-// section.intro {
-//     grid-area: hero;
-//     display: flex;
-//     flex-wrap: wrap;
-//     flex-direction: column;
-//     border: 5px solid red;
-// }
 
 section.intro {
     grid-area: hero;
@@ -40,15 +32,21 @@ header {
 }
 
 #zen-summary {
-    grid-area: ca1;
+    grid-area: ca1; 
 }
-
-// #zen-intro > header {
-//     flex-grow: 1;
-// }
 
 #zen-preamble {
     grid-area: ca2;
+}
+
+#zen-summary, #zen-preamble {
+    max-width: 800px;
+    justify-self: center;
+}
+
+div.supporting {
+    max-width: 800px;
+    justify-self: center;
 }
 
 section.intro > div {
@@ -56,20 +54,18 @@ section.intro > div {
     // border: 5px solid yellowgreen;
 }
 
-// #zen-summary {
-//     align-self: flex-start;
-// }
-
 .main {
+    // border: 5px dotted hotpink;
     display: grid;
     // grid-column: 1 / 6;
     grid-template-areas: 
-    "explain explain explain . ."
-    "participate participate participate . ."
-    "benefits benefits benefits . ."
+    "explain explain explain explain ."
+    "participate participate participate participate ."
+    "benefits benefits benefits benefits ."
     "require require require require ."
     "end end end end end";
     grid-area: ct-area1;
+    padding: 0 10px;
 }
 
 #zen-explanation {
@@ -88,23 +84,68 @@ section.intro > div {
     grid-area: require;
 }
 
-footer {
-    display: flex;
-    gap: 1em;
-    justify-content: center;
-    grid-area: side-bar1;
-    grid-area: end;
-    // border: 5px solid hotpink;
-}
-
 aside[role=complementary] {
     // grid-area: hero;
     grid-row: 1 / 3;
     // align-self: center;
-    margin-top: 220px;
+    margin-top: 250px;
     height: fit-content;
     grid-column: 5;
 }
+
+footer {
+    border: 5px dotted hotpink;
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    grid-area: end;
+    width: min(100%, 1020px);
+    // position: relative;
+    // right: 100px;
+    // top: 10px;
+    // transform: translate(-100px, 10px);
+    // overflow: hidden;
+}
+
+:is(main, footer) {
+    padding: 1.5em;
+}
+
+main {
+    background-color: $background;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+header, footer {
+    background-color: $secondary;
+    text-align: center;
+}
+
+header {
+    background-color: $background;
+}
+
+header p, header h1, header h2, footer p, footer h2 {
+    color: $white;
+}
+
+.main p, .main h2, .intro p {
+    color: $white;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    margin: 0;
+}
+
+//Unused or unneeded CSS: 
 
 // div[role=article] {
 //     display: grid;
@@ -135,44 +176,18 @@ aside[role=complementary] {
 //     grid-column: 1 / 6;
 // }
 
-main, header, footer {
-    padding: 1.5em;
-}
+// section.intro {
+//     grid-area: hero;
+//     display: flex;
+//     flex-wrap: wrap;
+//     flex-direction: column;
+//     border: 5px solid red;
+// }
 
-main {
-    background-color: $background;
-    max-width: 1100px;
-    margin: 0 auto;
-}
+// h3 {
+//     color: $primary2;
+// }
 
-header, footer {
-    background-color: $secondary;
-    text-align: center;
-}
-
-header {
-    background-color: $background;
-}
-
-header p, header h1, header h2, footer p, footer h2 {
-    color: $white;
-}
-
-.main p, .main h2, .intro p {
-    color: $white;
-}
-
-h3 {
-    color: $primary2;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-li {
-    padding: 10px;
-    margin: 0;
-}
+// #zen-summary {
+//     align-self: flex-start;
+// }

@@ -31,39 +31,42 @@ body {
   place-content: center;
   min-height: 100vh;
   margin: 0 auto;
-  font-size: 20px;
   background-color: #0b0713;
+  font-size: 1em;
 }
 
 h1, h2, h3, h4 {
   font-family: "Roboto", serif;
+  font-size: 2rem;
+  color: #E3DBEB;
 }
 
 p, a {
   font-family: "Asap", sans-serif;
+  font-size: clamp(1em, 1.5vw, 2rem);
 }
 
 img {
   max-width: 100%;
 }
 
-.main, #zen-summary, #zen-preamble {
-  padding: 0 40px;
+#zen-summary, #zen-preamble {
+  padding: 0 10px;
 }
 
 .sidebar {
   background-color: #382858;
-  color: #ebebeb;
   padding: 20px;
   border-radius: 8px 0 0 8px;
 }
 
-.sidebar h3 {
-  color: #a47bb1;
+:is(.sidebar[role=complementary], .select, .archives, .resources) {
+  font-size: clamp(1.2em, 1.5vw, 2rem);
+  color: #E3DBEB;
 }
 
 a, a:visited {
-  color: #a47bb1;
+  color: #E3DBEB;
   text-decoration: none;
 }
 a:hover, a:active, a:visited:hover, a:visited:active {
@@ -77,15 +80,41 @@ abbr {
   text-decoration: none;
 }
 
+.design-name {
+  font-size: clamp(0.8em, 1.5vw, 2rem);
+  color: #E3DBEB;
+}
+
+:is(.designer-name, nav[role=navigation]) {
+  font-size: clamp(0.6em, 1vw, 1.5rem);
+  color: #E3DBEB;
+}
+
+.design-name::after {
+  content: "\a";
+  white-space: pre;
+}
+
+:is(#zen-summary a, #zen-participation a) {
+  font-style: italic;
+  transition: all 50ms ease-in;
+  color: #a47bb1;
+}
+
+:is(#zen-summary a:hover, #zen-participation a:hover) {
+  font-size: 1.15em;
+}
+
 header[role=banner] {
   background-image: url("../images/fab5-lightning-sm.gif");
   background-repeat: no-repeat;
   background-position: center;
+  padding: 2em 0;
 }
-header[role=banner] > h1 {
+header[role=banner] :is(h1, h2) {
   font-size: 2.5em;
   font-weight: 900;
-  line-height: 1;
+  line-height: 3.6rem;
   margin: 20px 0 0;
   background-image: linear-gradient(45deg, #7853be, #8361c4, #8e6fc9, #997ece, #a48cd4, #b09ad9, #bba8df, #c6b7e4, #d1c5e9, #ddd3ef, #e8e1f4, #f3f0f9);
   -webkit-background-clip: text;
@@ -95,24 +124,31 @@ header[role=banner] > h1 {
   -webkit-animation: bg-animation 1.5s infinite alternate;
           animation: bg-animation 1.5s infinite alternate;
 }
-header[role=banner] > h2 {
-  font-size: 2em;
-  font-weight: 900;
-  line-height: 1;
-  margin: 20px 0 20px;
-  background-image: linear-gradient(45deg, #7853be, #8361c4, #8e6fc9, #997ece, #a48cd4, #b09ad9, #bba8df, #c6b7e4, #d1c5e9, #ddd3ef, #e8e1f4, #f3f0f9);
-  -webkit-background-clip: text;
-          background-clip: text;
-  color: transparent;
-  background-size: 400%;
-  -webkit-animation: bg-animation 1.5s infinite alternate;
-          animation: bg-animation 1.5s infinite alternate;
-}
 
+@media screen and (max-width: 550px) {
+  div.page-wrapper {
+    display: block;
+    margin: 0 auto;
+  }
+  div > section.intro {
+    display: block;
+  }
+  div.supporting {
+    display: block;
+  }
+  h3, p {
+    font-size: 1.2em;
+    margin: 20px 2vw;
+    line-height: 1.5em;
+  }
+  :is(a.designer-name, nav[role=navigation]) {
+    font-size: 0.8em;
+  }
+}
 .page-wrapper {
   display: grid;
   grid-gap: 1em;
-  grid-template-areas: "hero hero hero hero hero" "ct-area1 ct-area1 ct-area1 ct-area1 ct-area1" "ct-area2 ct-area2 ct-area2 ct-area2 . " "footer footer footer footer footer";
+  grid-template-areas: "hero hero hero hero hero" "ct-area1 ct-area1 ct-area1 ct-area1 . " "ct-area2 ct-area2 ct-area2 ct-area2 . " "footer footer footer footer footer";
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: auto auto;
   margin: 0 auto;
@@ -139,14 +175,25 @@ header {
   grid-area: ca2;
 }
 
+#zen-summary, #zen-preamble {
+  max-width: 800px;
+  justify-self: center;
+}
+
+div.supporting {
+  max-width: 800px;
+  justify-self: center;
+}
+
 section.intro > div {
   justify-content: center;
 }
 
 .main {
   display: grid;
-  grid-template-areas: "explain explain explain . ." "participate participate participate . ." "benefits benefits benefits . ." "require require require require ." "end end end end end";
+  grid-template-areas: "explain explain explain explain ." "participate participate participate participate ." "benefits benefits benefits benefits ." "require require require require ." "end end end end end";
   grid-area: ct-area1;
+  padding: 0 10px;
 }
 
 #zen-explanation {
@@ -165,24 +212,25 @@ section.intro > div {
   grid-area: require;
 }
 
-footer {
-  display: flex;
-  gap: 1em;
-  justify-content: center;
-  grid-area: side-bar1;
-  grid-area: end;
-}
-
 aside[role=complementary] {
   grid-row: 1/3;
-  margin-top: 220px;
+  margin-top: 250px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   grid-column: 5;
 }
 
-main, header, footer {
+footer {
+  border: 5px dotted hotpink;
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  grid-area: end;
+  width: min(100%, 1020px);
+}
+
+:is(main, footer) {
   padding: 1.5em;
 }
 
@@ -207,10 +255,6 @@ header p, header h1, header h2, footer p, footer h2 {
 
 .main p, .main h2, .intro p {
   color: #ebebeb;
-}
-
-h3 {
-  color: #a47bb1;
 }
 
 ul {
