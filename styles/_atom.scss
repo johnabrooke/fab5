@@ -50,15 +50,14 @@ h1, h2, h3, h4 {
 
 p, a {
     font-family: $paragraph-font;
-    // font-size: clamp(1rem, 1.5vw, 2rem);
 }
 
 img {
     max-width: 100%;
 }
 
-#zen-summary, #zen-preamble {
-    padding: 0 10px;
+.main > *:not(footer), #zen-summary, #zen-preamble {
+    padding: 0 40px;
 }
 
 .sidebar {

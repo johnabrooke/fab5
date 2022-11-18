@@ -4,10 +4,10 @@
 
 .page-wrapper {
     display: grid;
-    grid-gap: 1em;
+    grid-gap: 0 1em;
     grid-template-areas: 
     "hero hero hero hero hero"
-    "ct-area1 ct-area1 ct-area1 ct-area1 . "
+    "ct-area1 ct-area1 ct-area1 ct-area1 ct-area1 "
     "ct-area2 ct-area2 ct-area2 ct-area2 . "
     "footer footer footer footer footer";
     grid-template-columns: repeat(5, 1fr);
@@ -44,7 +44,7 @@ header {
     justify-self: center;
 }
 
-div.supporting {
+div.supporting > *:not(footer) {
     max-width: 800px;
     justify-self: center;
 }
@@ -65,7 +65,7 @@ section.intro > div {
     "require require require require ."
     "end end end end end";
     grid-area: ct-area1;
-    padding: 0 10px;
+    grid-template-columns: repeat(5, 1fr);
 }
 
 #zen-explanation {
@@ -96,12 +96,12 @@ aside[role=complementary] {
 }
 
 footer {
-    border: 5px dotted hotpink;
+    // border: 5px dotted hotpink;
     display: flex;
     gap: 1em;
     justify-content: center;
     grid-area: end;
-    width: min(100%, 1020px);
+    // width: min(100%, 1020px);
     // position: relative;
     // right: 100px;
     // top: 10px;
@@ -113,7 +113,7 @@ footer {
     padding: 1.5em;
 }
 
-main {
+main > *:not(footer) {
     background-color: $background;
     max-width: 1100px;
     margin: 0 auto;
