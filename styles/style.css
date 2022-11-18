@@ -32,7 +32,7 @@ body {
   min-height: 100vh;
   margin: 0 auto;
   background-color: #0b0713;
-  font-size: 1em;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
 }
 
 h1, h2, h3, h4 {
@@ -60,7 +60,7 @@ img {
 }
 
 :is(.sidebar[role=complementary], .select, .archives, .resources) {
-  font-size: clamp(1.2em, 1.5vw, 2rem);
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
   color: #E3DBEB;
 }
 
@@ -80,12 +80,12 @@ abbr {
 }
 
 .design-name {
-  font-size: clamp(0.8em, 1.5vw, 2rem);
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
   color: #E3DBEB;
 }
 
 :is(.designer-name, nav[role=navigation]) {
-  font-size: clamp(0.6em, 1vw, 1.5rem);
+  font-size: clamp(0.75rem, 1vw, 1rem);
   color: #E3DBEB;
 }
 
@@ -124,7 +124,7 @@ header[role=banner] :is(h1, h2) {
           animation: bg-animation 1.5s infinite alternate;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 600px) {
   div.page-wrapper {
     display: block;
     margin: 0 auto;
@@ -218,6 +218,9 @@ aside[role=complementary] {
   height: -moz-fit-content;
   height: fit-content;
   grid-column: 5;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 footer {
