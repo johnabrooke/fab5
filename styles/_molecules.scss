@@ -18,3 +18,33 @@ header[role=banner] {
       animation: bg-animation 1.5s infinite alternate;
     }
   }
+
+  @media screen and (max-width: 550px) {
+    
+    div.page-wrapper {
+      display: block;
+      // grid-gap: 1em;
+      // grid-template-columns: 1fr;
+      // grid-template-rows: auto;
+      margin: 0 auto;
+    }
+
+    div > section.intro {
+      display: block;
+    }
+
+    div.supporting {
+      display: block;
+    }
+
+    h3, p {
+      font-size: 1.2em;
+      margin: 20px 2vw;
+      line-height: 1.5em;
+    }
+    
+    :is(a.designer-name, nav[role="navigation"]) {
+      font-size: .8em;
+    }
+
+  }
