@@ -43,15 +43,14 @@ h1, h2, h3, h4 {
 
 p, a {
   font-family: "Asap", sans-serif;
-  font-size: clamp(1em, 1.5vw, 2rem);
 }
 
 img {
   max-width: 100%;
 }
 
-#zen-summary, #zen-preamble {
-  padding: 0 10px;
+.main > *:not(footer), #zen-summary, #zen-preamble {
+  padding: 0 40px;
 }
 
 .sidebar {
@@ -147,8 +146,8 @@ header[role=banner] :is(h1, h2) {
 }
 .page-wrapper {
   display: grid;
-  grid-gap: 1em;
-  grid-template-areas: "hero hero hero hero hero" "ct-area1 ct-area1 ct-area1 ct-area1 . " "ct-area2 ct-area2 ct-area2 ct-area2 . " "footer footer footer footer footer";
+  grid-gap: 0 1em;
+  grid-template-areas: "hero hero hero hero hero" "ct-area1 ct-area1 ct-area1 ct-area1 ct-area1 " "ct-area2 ct-area2 ct-area2 ct-area2 . " "footer footer footer footer footer";
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: auto auto;
   margin: 0 auto;
@@ -180,7 +179,7 @@ header {
   justify-self: center;
 }
 
-div.supporting {
+div.supporting > *:not(footer) {
   max-width: 800px;
   justify-self: center;
 }
@@ -193,7 +192,7 @@ section.intro > div {
   display: grid;
   grid-template-areas: "explain explain explain explain ." "participate participate participate participate ." "benefits benefits benefits benefits ." "require require require require ." "end end end end end";
   grid-area: ct-area1;
-  padding: 0 10px;
+  grid-template-columns: repeat(5, 1fr);
 }
 
 #zen-explanation {
@@ -222,19 +221,17 @@ aside[role=complementary] {
 }
 
 footer {
-  border: 5px dotted hotpink;
   display: flex;
   gap: 1em;
   justify-content: center;
   grid-area: end;
-  width: min(100%, 1020px);
 }
 
 :is(main, footer) {
   padding: 1.5em;
 }
 
-main {
+main > *:not(footer) {
   background-color: #0b0713;
   max-width: 1100px;
   margin: 0 auto;
