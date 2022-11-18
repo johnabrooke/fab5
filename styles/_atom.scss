@@ -38,7 +38,6 @@ body {
     place-content: center;
     min-height: 100vh;
     margin: 0 auto;
-    font-size: 16px;
     background-color: $background;
 }
 
@@ -49,14 +48,13 @@ h1, h2, h3, h4 {
 
 p, a {
     font-family: $paragraph-font;
-    font-size: 1.25rem;
 }
 
 img {
     max-width: 100%;
 }
 
-.main, #zen-summary, #zen-preamble {
+.main > *:not(footer), #zen-summary, #zen-preamble {
     padding: 0 40px;
 }
 
