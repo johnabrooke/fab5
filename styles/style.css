@@ -147,8 +147,8 @@ header[role=banner] :is(h1, h2) {
 .page-wrapper {
   display: grid;
   grid-gap: 0 1em;
-  grid-template-areas: "hero hero hero hero hero" "ct-area1 ct-area1 ct-area1 ct-area1 ct-area1 " "ct-area2 ct-area2 ct-area2 ct-area2 . " "footer footer footer footer footer";
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-areas: "hero hero hero hero hero hero hero hero" "ct-area1 ct-area1 ct-area1 ct-area1 ct-area1 ct-area1 ct-area1 ct-area1" "ct-area2 ct-area2 ct-area2 ct-area2 ct-area2 ct-area2 ct-area2 . " "footer footer footer footer footer footer footer footer";
+  grid-template-columns: repeat(8, 1fr);
   grid-template-rows: auto auto;
   margin: 0 auto;
 }
@@ -157,8 +157,8 @@ section.intro {
   grid-area: hero;
   display: grid;
   grid-gap: 1em;
-  grid-template-areas: "hero hero hero hero hero" "ca1 ca1 ca1 ca1 side-bar2" "ca2 ca2 ca2 ca2 .";
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-areas: "hero hero hero hero hero hero hero hero" "ca1 ca1 ca1 ca1 ca1 ca1 side-bar2 side-bar2" "ca2 ca2 ca2 ca2 ca2 ca2 . .";
+  grid-template-columns: repeat(8, 1fr);
   grid-template-rows: auto auto auto;
 }
 
@@ -214,13 +214,15 @@ section.intro > div {
 aside[role=complementary] {
   grid-row: 1/3;
   margin-top: 250px;
+  margin-bottom: 100px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  grid-column: 5;
+  grid-column: 7/9;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  margin-right: 20%;
 }
 
 footer {
