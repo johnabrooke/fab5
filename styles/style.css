@@ -130,6 +130,46 @@ header[role=banner] :is(h1, h2) {
           animation: bg-animation 1000ms infinite alternate;
 }
 
+.zen-accessibility {
+  visibility: hidden;
+}
+.zen-accessibility:after {
+  content: "FAQ";
+  visibility: visible;
+}
+
+.zen-github {
+  visibility: hidden;
+}
+.zen-github:after {
+  content: "GITHUB";
+  visibility: visible;
+}
+
+.zen-license {
+  visibility: hidden;
+}
+.zen-license:after {
+  content: "LICENSE";
+  visibility: visible;
+}
+
+.zen-validate-html {
+  visibility: hidden;
+}
+.zen-validate-html:after {
+  content: "VALIDATE HTML";
+  visibility: visible;
+}
+
+.zen-validate-css {
+  visibility: hidden;
+}
+.zen-validate-css:after {
+  content: "VALIDATE CSS";
+  visibility: visible;
+}
+
 @media screen and (max-width: 600px) {
   div.page-wrapper {
     display: block;
@@ -155,7 +195,7 @@ header[role=banner] :is(h1, h2) {
   grid-gap: 0 1em;
   grid-template-areas: "hero hero hero hero hero hero hero hero" "ct-area1 ct-area1 ct-area1 ct-area1 ct-area1 ct-area1 ct-area1 ct-area1" "ct-area2 ct-area2 ct-area2 ct-area2 ct-area2 ct-area2 ct-area2 . " "footer footer footer footer footer footer footer footer";
   grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: auto auto;
+  grid-template-rows: auto 1fr auto;
   margin: 0 auto;
 }
 

@@ -21,6 +21,52 @@ header[role=banner] {
     }
   }
 
+  .zen-accessibility {
+    visibility: hidden;
+    &:after {
+      content: 'FAQ';
+      visibility: visible;
+    }
+  }
+
+  .zen-github {
+    visibility: hidden;
+    &:after {
+      content: 'GITHUB';
+      visibility: visible;
+    }
+  }
+
+  .zen-license {
+    visibility: hidden;
+    &:after {
+      content: 'LICENSE';
+      visibility: visible;
+    }
+  }
+
+  .zen-validate-html {
+    visibility: hidden;
+    &:after {
+      content: 'VALIDATE HTML';
+      visibility: visible;
+    }
+  }
+
+  .zen-validate-css {
+    visibility: hidden;
+    &:after {
+      content: 'VALIDATE CSS';
+      visibility: visible;
+    }
+  }
+
+  // .zen-validate-html, .zen-validate-css {
+  //   &:before {
+  //     content: 'VALIDATE ';
+  //   }
+  // }
+  
   @media screen and (max-width: 600px) {
     
     div.page-wrapper {
