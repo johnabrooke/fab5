@@ -182,7 +182,6 @@ header {
 
 #zen-summary, #zen-preamble {
   max-width: 800px;
-  justify-self: center;
 }
 
 div.supporting > *:not(footer) {
