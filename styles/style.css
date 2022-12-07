@@ -56,7 +56,7 @@ img {
 .sidebar {
   background-color: #382858;
   padding: 20px;
-  border-radius: 8px 0 0 8px;
+  border-radius: 8px;
 }
 
 :is(.sidebar[role=complementary], .select, .archives, .resources) {
@@ -94,14 +94,18 @@ abbr {
   white-space: pre;
 }
 
-:is(#zen-summary a, #zen-participation a) {
+#zen-summary a, #zen-participation a {
   font-style: italic;
-  transition: all 50ms ease-in;
   color: #a47bb1;
+  transition: color 0.1s ease-in-out, box-shadow 0.7s ease-in-out;
 }
 
-:is(#zen-summary a:hover, #zen-participation a:hover) {
-  font-size: 1.15em;
+#zen-summary a:hover, #zen-participation a:hover {
+  color: #E3DBEB;
+  box-shadow: inset 200px 0 0 0 #422a70;
+  text-decoration: none;
+  padding: 2px 0;
+  border-radius: 2px;
 }
 
 header[role=banner] {
@@ -109,6 +113,8 @@ header[role=banner] {
   background-repeat: no-repeat;
   background-position: center;
   padding: 2em 0;
+  -webkit-mask-image: radial-gradient(circle, black, transparent);
+  mask-image: radial-gradient(circle, black, transparent);
 }
 header[role=banner] :is(h1, h2) {
   font-size: 2.5em;
@@ -120,8 +126,8 @@ header[role=banner] :is(h1, h2) {
           background-clip: text;
   color: transparent;
   background-size: 400%;
-  -webkit-animation: bg-animation 1.5s infinite alternate;
-          animation: bg-animation 1.5s infinite alternate;
+  -webkit-animation: bg-animation 1000ms infinite alternate;
+          animation: bg-animation 1000ms infinite alternate;
 }
 
 @media screen and (max-width: 600px) {
@@ -181,7 +187,6 @@ header {
 
 div.supporting > *:not(footer) {
   max-width: 800px;
-  justify-self: center;
 }
 
 section.intro > div {
