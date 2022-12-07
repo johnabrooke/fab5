@@ -130,36 +130,13 @@ header[role=banner] :is(h1, h2) {
           animation: bg-animation 1000ms infinite alternate;
 }
 
-.zen-accessibility {
-  visibility: hidden;
-}
-.zen-accessibility:after {
-  content: "FAQ";
-  visibility: visible;
-}
-
-.zen-github {
-  visibility: hidden;
-}
-.zen-github:after {
-  content: "GITHUB";
-  visibility: visible;
-}
-
-.zen-license {
-  visibility: hidden;
-}
-.zen-license:after {
-  content: "LICENSE";
-  visibility: visible;
-}
-
 .zen-validate-html {
   visibility: hidden;
 }
 .zen-validate-html:after {
   content: "VALIDATE HTML";
   visibility: visible;
+  margin-left: -60px;
 }
 
 .zen-validate-css {
@@ -168,6 +145,34 @@ header[role=banner] :is(h1, h2) {
 .zen-validate-css:after {
   content: "VALIDATE CSS";
   visibility: visible;
+  margin-left: -30px;
+}
+
+.zen-license {
+  visibility: hidden;
+}
+.zen-license:after {
+  content: "LICENSE";
+  visibility: visible;
+  margin-left: -20px;
+}
+
+.zen-accessibility {
+  visibility: hidden;
+}
+.zen-accessibility:after {
+  content: "FAQ";
+  visibility: visible;
+  margin-left: -40px;
+}
+
+.zen-github {
+  visibility: hidden;
+}
+.zen-github:after {
+  content: "GITHUB";
+  visibility: visible;
+  margin-left: -30px;
 }
 
 @media screen and (max-width: 600px) {

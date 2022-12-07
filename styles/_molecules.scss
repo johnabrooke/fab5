@@ -21,35 +21,12 @@ header[role=banner] {
     }
   }
 
-  .zen-accessibility {
-    visibility: hidden;
-    &:after {
-      content: 'FAQ';
-      visibility: visible;
-    }
-  }
-
-  .zen-github {
-    visibility: hidden;
-    &:after {
-      content: 'GITHUB';
-      visibility: visible;
-    }
-  }
-
-  .zen-license {
-    visibility: hidden;
-    &:after {
-      content: 'LICENSE';
-      visibility: visible;
-    }
-  }
-
   .zen-validate-html {
     visibility: hidden;
     &:after {
       content: 'VALIDATE HTML';
       visibility: visible;
+      margin-left: -60px;
     }
   }
 
@@ -58,14 +35,36 @@ header[role=banner] {
     &:after {
       content: 'VALIDATE CSS';
       visibility: visible;
+      margin-left: -30px;
     }
   }
 
-  // .zen-validate-html, .zen-validate-css {
-  //   &:before {
-  //     content: 'VALIDATE ';
-  //   }
-  // }
+  .zen-license {
+    visibility: hidden;
+    &:after {
+      content: 'LICENSE';
+      visibility: visible;
+      margin-left: -20px;
+    }
+  }
+
+  .zen-accessibility {
+    visibility: hidden;
+    &:after {
+      content: 'FAQ';
+      visibility: visible;
+      margin-left: -40px;
+    }
+  }
+
+  .zen-github {
+    visibility: hidden;
+    &:after {
+      content: 'GITHUB';
+      visibility: visible;
+      margin-left: -30px;
+    }
+  }
   
   @media screen and (max-width: 600px) {
     
