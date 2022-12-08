@@ -34,7 +34,7 @@ html {
 }
 
 body {
-    display: grid;
+    // display: grid;
     place-content: center;
     min-height: 100vh;
     margin: 0 auto;
@@ -56,9 +56,9 @@ img {
     max-width: 100%;
 }
 
-.main > *:not(footer), #zen-summary, #zen-preamble {
-    padding: 0 40px;
-}
+// .main > *:not(footer), #zen-summary, #zen-preamble {
+//     padding: 0 80px;
+// }
 
 .sidebar {
     background-color: $secondary;
@@ -67,7 +67,7 @@ img {
 }
 
 :is(.sidebar[role=complementary], .select, .archives, .resources) {
-    font-size: clamp(.6rem, 1.5vw, 1rem);
+    font-size: clamp(.8rem, 1.5vw, 1rem);
     color: $lt-purple;
 }
 

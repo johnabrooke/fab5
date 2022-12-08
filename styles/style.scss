@@ -21,8 +21,8 @@ section.intro {
     grid-gap: 1em;
     grid-template-areas: 
     "hero hero hero hero hero hero hero hero"
-    "ca1 ca1 ca1 ca1 ca1 ca1 side-bar2 side-bar2"
-    "ca2 ca2 ca2 ca2 ca2 ca2 . .";
+    "ca1a ca1 ca1 ca1 ca1 ca1 . ."
+    "ca2a ca2 ca2 ca2 ca2 ca2 . .";
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: auto auto auto; 
 }
@@ -39,11 +39,6 @@ header {
     grid-area: ca2;
 }
 
-#zen-summary, #zen-preamble {
-    max-width: 800px;
-    // justify-self: center;
-}
-
 div.supporting > *:not(footer) {
     max-width: 800px;
     // justify-self: center;
@@ -56,13 +51,13 @@ section.intro > div {
 .main {
     display: grid;
     grid-template-areas: 
-    "explain explain explain explain ."
-    "participate participate participate participate ."
-    "benefits benefits benefits benefits ."
-    "require require require require ."
+    "explaina explain explain explain ."
+    "participatea participate participate participate ."
+    "benefitsa benefits benefits benefits ."
+    "requirea require require require ."
     "end end end end end";
     grid-area: ct-area1;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: .59fr repeat(4, 1fr);
 }
 
 #zen-explanation {
@@ -86,10 +81,10 @@ aside[role=complementary] {
     margin-top: 250px;
     margin-bottom: 100px;
     height: fit-content;
-    grid-column: 7/9;
+    grid-column: 6/8;
     position: sticky;
     top: 0;
-    margin-right: 20%;
+    margin-left: 20%;
 }
 
 footer {
@@ -135,6 +130,10 @@ ul {
 li {
     padding: 10px;
     margin: 0;
+}
+
+.viewall, .archives {
+    display:none;
 }
 
 //Unused or unneeded CSS: 
@@ -183,3 +182,66 @@ li {
 // #zen-summary {
 //     align-self: flex-start;
 // }
+
+@media screen and (max-width: 749px) {
+//When the screen is small    
+    .main > *:not(footer), #zen-summary, #zen-preamble {
+        padding: 0 35px;
+    }
+
+    div.aside {
+        display: flex;
+    }
+
+    aside[role=complementary] {
+        margin: 20px 0 0 0;
+        height: fit-content;
+        border-radius: 0;
+    }
+
+    div.page-wrapper {
+        display: block;
+        // grid-gap: 1em;
+        // grid-template-columns: 1fr;
+        // grid-template-rows: auto;
+        margin: 0 auto;
+      }
+  
+      div > section.intro {
+        display: block;
+      }
+  
+      div.supporting {
+        display: block;
+      }
+  
+      h3, p {
+        font-size: 1.2em;
+        margin: 20px 2vw;
+        line-height: 1.5em;
+      }
+
+    // .page-wrapper {
+    //     display: grid;
+    //     grid-template-areas: 
+    //     "intro"
+    //     "aside"
+    //     "main";
+    // }
+}
+@media screen and (min-width: 750px) {
+//When the screen is big
+
+#zen-summary, 
+#zen-preamble, 
+#zen-explanation, 
+#zen-participation, 
+#zen-benefits, 
+#zen-requirements {
+    // max-width: 800px;
+    width: clamp(400px, 80%, 800px)
+    // justify-self: center;
+
+}
+
+}

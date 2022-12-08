@@ -27,7 +27,6 @@ html {
 }
 
 body {
-  display: grid;
   place-content: center;
   min-height: 100vh;
   margin: 0 auto;
@@ -49,10 +48,6 @@ img {
   max-width: 100%;
 }
 
-.main > *:not(footer), #zen-summary, #zen-preamble {
-  padding: 0 40px;
-}
-
 .sidebar {
   background-color: #382858;
   padding: 20px;
@@ -60,7 +55,7 @@ img {
 }
 
 :is(.sidebar[role=complementary], .select, .archives, .resources) {
-  font-size: clamp(0.6rem, 1.5vw, 1rem);
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
   color: #E3DBEB;
 }
 
@@ -134,27 +129,27 @@ header[role=banner] :is(h1, h2) {
   visibility: hidden;
 }
 .zen-validate-html:after {
-  content: "VALIDATE HTML";
+  content: "Validate HTML";
   visibility: visible;
-  margin-left: -60px;
+  margin-left: -50px;
 }
 
 .zen-validate-css {
   visibility: hidden;
 }
 .zen-validate-css:after {
-  content: "VALIDATE CSS";
+  content: "Validate CSS";
   visibility: visible;
-  margin-left: -30px;
+  margin-left: -20px;
 }
 
 .zen-license {
   visibility: hidden;
 }
 .zen-license:after {
-  content: "LICENSE";
+  content: "License";
   visibility: visible;
-  margin-left: -20px;
+  margin-left: -10px;
 }
 
 .zen-accessibility {
@@ -163,7 +158,7 @@ header[role=banner] :is(h1, h2) {
 .zen-accessibility:after {
   content: "FAQ";
   visibility: visible;
-  margin-left: -40px;
+  margin-left: -30px;
 }
 
 .zen-github {
@@ -172,29 +167,9 @@ header[role=banner] :is(h1, h2) {
 .zen-github:after {
   content: "GITHUB";
   visibility: visible;
-  margin-left: -30px;
+  margin-left: -20px;
 }
 
-@media screen and (max-width: 600px) {
-  div.page-wrapper {
-    display: block;
-    margin: 0 auto;
-  }
-  div > section.intro {
-    display: block;
-  }
-  div.supporting {
-    display: block;
-  }
-  h3, p {
-    font-size: 1.2em;
-    margin: 20px 2vw;
-    line-height: 1.5em;
-  }
-  :is(a.designer-name, nav[role=navigation]) {
-    font-size: 0.8em;
-  }
-}
 .page-wrapper {
   display: grid;
   grid-gap: 0 1em;
@@ -208,7 +183,7 @@ section.intro {
   grid-area: hero;
   display: grid;
   grid-gap: 1em;
-  grid-template-areas: "hero hero hero hero hero hero hero hero" "ca1 ca1 ca1 ca1 ca1 ca1 side-bar2 side-bar2" "ca2 ca2 ca2 ca2 ca2 ca2 . .";
+  grid-template-areas: "hero hero hero hero hero hero hero hero" "ca1a ca1 ca1 ca1 ca1 ca1 . ." "ca2a ca2 ca2 ca2 ca2 ca2 . .";
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: auto auto auto;
 }
@@ -225,10 +200,6 @@ header {
   grid-area: ca2;
 }
 
-#zen-summary, #zen-preamble {
-  max-width: 800px;
-}
-
 div.supporting > *:not(footer) {
   max-width: 800px;
 }
@@ -239,9 +210,9 @@ section.intro > div {
 
 .main {
   display: grid;
-  grid-template-areas: "explain explain explain explain ." "participate participate participate participate ." "benefits benefits benefits benefits ." "require require require require ." "end end end end end";
+  grid-template-areas: "explaina explain explain explain ." "participatea participate participate participate ." "benefitsa benefits benefits benefits ." "requirea require require require ." "end end end end end";
   grid-area: ct-area1;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: 0.59fr repeat(4, 1fr);
 }
 
 #zen-explanation {
@@ -267,11 +238,11 @@ aside[role=complementary] {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  grid-column: 7/9;
+  grid-column: 6/8;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  margin-right: 20%;
+  margin-left: 20%;
 }
 
 footer {
@@ -317,4 +288,49 @@ ul {
 li {
   padding: 10px;
   margin: 0;
+}
+
+.viewall, .archives {
+  display: none;
+}
+
+@media screen and (max-width: 749px) {
+  .main > *:not(footer), #zen-summary, #zen-preamble {
+    padding: 0 35px;
+  }
+  div.aside {
+    display: flex;
+  }
+  aside[role=complementary] {
+    margin: 20px 0 0 0;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    border-radius: 0;
+  }
+  div.page-wrapper {
+    display: block;
+    margin: 0 auto;
+  }
+  div > section.intro {
+    display: block;
+  }
+  div.supporting {
+    display: block;
+  }
+  h3, p {
+    font-size: 1.2em;
+    margin: 20px 2vw;
+    line-height: 1.5em;
+  }
+}
+@media screen and (min-width: 750px) {
+  #zen-summary,
+#zen-preamble,
+#zen-explanation,
+#zen-participation,
+#zen-benefits,
+#zen-requirements {
+    width: clamp(400px, 80%, 800px);
+  }
 }/*# sourceMappingURL=style.css.map */

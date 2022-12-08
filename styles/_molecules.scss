@@ -24,27 +24,27 @@ header[role=banner] {
   .zen-validate-html {
     visibility: hidden;
     &:after {
-      content: 'VALIDATE HTML';
+      content: 'Validate HTML';
       visibility: visible;
-      margin-left: -60px;
+      margin-left: -50px;
     }
   }
 
   .zen-validate-css {
     visibility: hidden;
     &:after {
-      content: 'VALIDATE CSS';
+      content: 'Validate CSS';
       visibility: visible;
-      margin-left: -30px;
+      margin-left: -20px;
     }
   }
 
   .zen-license {
     visibility: hidden;
     &:after {
-      content: 'LICENSE';
+      content: 'License';
       visibility: visible;
-      margin-left: -20px;
+      margin-left: -10px;
     }
   }
 
@@ -53,7 +53,7 @@ header[role=banner] {
     &:after {
       content: 'FAQ';
       visibility: visible;
-      margin-left: -40px;
+      margin-left: -30px;
     }
   }
 
@@ -62,36 +62,36 @@ header[role=banner] {
     &:after {
       content: 'GITHUB';
       visibility: visible;
-      margin-left: -30px;
+      margin-left: -20px;
     }
   }
   
-  @media screen and (max-width: 600px) {
+  // @media screen and (max-width: 750px) {
     
-    div.page-wrapper {
-      display: block;
-      // grid-gap: 1em;
-      // grid-template-columns: 1fr;
-      // grid-template-rows: auto;
-      margin: 0 auto;
-    }
+  //   div.page-wrapper {
+  //     display: block;
+  //     // grid-gap: 1em;
+  //     // grid-template-columns: 1fr;
+  //     // grid-template-rows: auto;
+  //     margin: 0 auto;
+  //   }
 
-    div > section.intro {
-      display: block;
-    }
+  //   div > section.intro {
+  //     display: block;
+  //   }
 
-    div.supporting {
-      display: block;
-    }
+  //   div.supporting {
+  //     display: block;
+  //   }
 
-    h3, p {
-      font-size: 1.2em;
-      margin: 20px 2vw;
-      line-height: 1.5em;
-    }
+  //   h3, p {
+  //     font-size: 1.2em;
+  //     margin: 20px 2vw;
+  //     line-height: 1.5em;
+  //   }
     
-    :is(a.designer-name, nav[role="navigation"]) {
-      font-size: .8em;
-    }
+    // :is(a.designer-name, nav[role="navigation"]) {
+    //   font-size: .8em;
+    // }
 
-  }
+  // }
