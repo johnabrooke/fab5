@@ -317,4 +317,8 @@ ul {
 li {
   padding: 10px;
   margin: 0;
+}
+
+.viewall, .archives {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
